@@ -53,18 +53,38 @@ Before we code, let's get everything ready!
 **What you'll learn:** How to talk to the computer and make it do stuff.
 **Time estimate:** ~1–2 weeks (15–20 min per session)
 
+### What you already know
+*(Nothing yet — this is the beginning! 🎉)*
+
 ### Concepts
 
+- [ ] **Comments (`#`)** — Notes inside code that Python ignores; great for explaining what your code does
+  - Example: `# This prints a greeting` then `print("Hello!")`
+- [ ] **Indentation** — Python uses spaces to group code together; getting this wrong is the #1 beginner mistake!
+  - Rule: always use 4 spaces (or one Tab) when Python expects it — you'll see why in Stage 2
 - [ ] **print()** — Make the screen show messages
 - [ ] **Variables** — Boxes that store information
   - [ ] Storing your name: `name = "Alex"`
   - [ ] Storing your age: `age = 9`
-- [ ] **Data types** — Text (strings), numbers (int), and True/False (bool)
-- [ ] **input()** — Ask the user to type something
+- [ ] **Data types** — Text (strings), numbers (int/float), and True/False (bool)
+- [ ] **Type conversion** — Switching between types when you need to
+  - `int("9")` turns the text `"9"` into the number `9`
+  - `str(9)` turns the number `9` into the text `"9"`
+  - `float("3.14")` turns text into a decimal number
+- [ ] **input()** — Ask the user to type something *(always gives back text/string, even if they type a number!)*
 - [ ] **String joining** — Combine text with `+` and `str()`
   - Example: `print("Hello " + name + "! You are " + str(age) + " years old.")`
 - [ ] ⭐ **BONUS — f-strings** — A cleaner way to mix variables into a sentence *(try this once the basics feel easy)*
   - Example: `print(f"Hello, {name}! You are {age} years old.")`
+
+### 🐛 When Things Break (Reading Error Messages)
+
+Errors are clues, not failures! The two most common ones:
+
+- **SyntaxError** — Python can't understand what you wrote (check spelling, missing `:`, mismatched quotes)
+- **NameError** — You used a variable name Python doesn't recognise (check you spelled it the same way everywhere)
+
+> **Tip:** Always read the last line of the error first — it tells you *what* went wrong. The line above tells you *where*.
 
 ### 🎯 Mini Projects
 
@@ -87,12 +107,16 @@ Before we code, let's get everything ready!
 **What you'll learn:** How to make programs choose what to do.
 **Time estimate:** ~1–2 weeks
 
+### What you already know
+- print(), variables, data types, type conversion, input()
+
 ### Concepts
 
 - [ ] **if** statement — "If this is true, do this"
 - [ ] **else** — "Otherwise, do that"
 - [ ] **elif** — "Or if this other thing is true…"
 - [ ] **Comparison operators** — `==`, `!=`, `>`, `<`, `>=`, `<=`
+  - ⚠️ **Gotcha:** `input()` always gives back text, so `age == 10` won't work until you convert: `int(age) == 10`
 - [ ] **Logical operators** — `and`, `or`, `not`
 - [ ] **`random` module** — Make the computer pick something randomly
   - `import random` at the top of your file
@@ -119,6 +143,9 @@ Before we code, let's get everything ready!
 
 **What you'll learn:** How to make the computer repeat tasks without writing the same code over and over.
 **Time estimate:** ~1–2 weeks
+
+### What you already know
+- print(), variables, type conversion, input(), if / elif / else, comparison operators, random
 
 ### Concepts
 
@@ -155,6 +182,9 @@ Before we code, let's get everything ready!
 **What you'll learn:** How to write reusable chunks of code — like teaching the computer a new trick it can do anytime you ask.
 **Time estimate:** ~1–2 weeks
 
+### What you already know
+- print(), variables, type conversion, input(), if / elif / else, for loops, while loops, break, continue
+
 ### Concepts
 
 - [ ] **def** — Define (create) a function
@@ -162,6 +192,9 @@ Before we code, let's get everything ready!
 - [ ] **Parameters / Arguments** — Give the function information to work with
 - [ ] **return** — Get an answer back from a function
 - [ ] **`None`** — What a function gives back when there is no `return` *(good to know so bugs don't surprise you!)*
+- [ ] **Variable scope** — Variables created *inside* a function stay inside it; they disappear when the function finishes
+  - Example: if you write `score = 0` inside a function, code outside the function can't see it
+  - Fix: either `return` the value, or define the variable *before* the function
 - [ ] Why functions rock: **write once, use many times!**
 
 ### 🎯 Mini Projects
@@ -185,6 +218,9 @@ Before we code, let's get everything ready!
 
 **What you'll learn:** How to store multiple things together — like a backpack full of items.
 **Time estimate:** ~1–2 weeks
+
+### What you already know
+- print(), variables, type conversion, input(), if / elif / else, for / while loops, break, continue, functions with parameters and return
 
 ### Concepts
 
@@ -218,12 +254,15 @@ Before we code, let's get everything ready!
 **What you'll use:** Everything from Stages 1–5!
 **Time estimate:** ~2–3 weeks
 
+### What you already know
+- print(), variables, type conversion, input(), if / elif / else, for / while loops, break, continue, functions, lists — basically everything!
+
 Choose **one** (or invent your own!):
 
 - [ ] 🐍 **Snake & Ladder** (text version) — Roll a die, move your piece, hit snakes and ladders
 - [ ] 🃏 **Blackjack / 21** — Card game against the computer
 - [ ] 🔤 **Hangman** — Guess the word letter by letter
-- [ ] 🏓 **Ping Pong/Pong** — (stretch goal, uses `pygame`) build on what Dad already made!
+- [ ] 🏓 **Ping Pong/Pong** — ⚠️ *Very hard — uses `pygame`, a whole new library. Best tackled with Dad side-by-side. Save this for after the course, or as a special bonus project!*
 
 ### Project Checklist
 
@@ -322,4 +361,4 @@ Finished all 6 stages and want to keep going? Here are some exciting next steps!
 
 ---
 
-*Last updated: 2026-03-28*
+*Last updated: 2026-04-03*
